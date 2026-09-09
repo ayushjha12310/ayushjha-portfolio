@@ -17,7 +17,7 @@ export default function ThemeToggle() {
       <button
         type="button"
         aria-label="Toggle theme"
-        className="h-10 w-10 rounded-xl border border-dark-border"
+        className="h-10 w-10 rounded-xl border border-border bg-card"
       />
     );
   }
@@ -32,16 +32,18 @@ export default function ThemeToggle() {
       className="
         flex h-10 w-10 items-center justify-center
         rounded-xl
-        border border-dark-border
-        bg-dark-card
-        text-dark-text
+        border border-border
+        bg-card
+        text-foreground
         transition-all duration-200
         hover:-translate-y-0.5
-        hover:border-dark-accent
+        hover:border-accent
         active:scale-95
-        dark:border-dark-border
-        dark:bg-dark-card
-        dark:text-dark-text
+        focus-visible:outline-none
+        focus-visible:ring-2
+        focus-visible:ring-accent
+        focus-visible:ring-offset-2
+        focus-visible:ring-offset-background
       "
     >
       {isDark ? (
