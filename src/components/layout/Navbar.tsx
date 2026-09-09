@@ -20,6 +20,10 @@ const navItems = [
     label: "Projects",
     href: "/projects",
   },
+  {
+    label: "Repositories",
+    href: "/repositories",
+  },
 ];
 
 export default function Navbar() {
@@ -28,6 +32,7 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
+        {/* Logo / Wordmark */}
         <Link
           href="/"
           onClick={() => setIsOpen(false)}
@@ -36,6 +41,7 @@ export default function Navbar() {
           {"<yourusername.dev />"}
         </Link>
 
+        {/* Desktop Navigation */}
         <nav className="hidden items-center gap-8 md:flex">
           {navItems.map((item) => (
             <Link
@@ -49,11 +55,12 @@ export default function Navbar() {
 
           <ThemeToggle />
 
-          <Button href="#contact" variant="secondary">
+          <Button href="/contact" variant="secondary">
             Contact
           </Button>
         </nav>
 
+        {/* Mobile Controls */}
         <div className="flex items-center gap-2 md:hidden">
           <ThemeToggle />
 
@@ -69,6 +76,7 @@ export default function Navbar() {
         </div>
       </div>
 
+      {/* Mobile Navigation */}
       {isOpen && (
         <div className="border-t border-border md:hidden">
           <nav className="mx-auto flex max-w-6xl flex-col px-6 py-4">
@@ -85,7 +93,7 @@ export default function Navbar() {
 
             <div className="pt-4">
               <Button
-                href="#contact"
+                href="/contact"
                 variant="secondary"
                 className="w-full"
               >

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 
 const geistSans = Geist({
@@ -26,28 +28,32 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-   <html lang="en" suppressHydrationWarning>
-  <head>
-    <script
-      dangerouslySetInnerHTML={{
-        __html: `
-          (() => {
-            try {
-              const theme = localStorage.getItem("portfolio-theme");
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (() => {
+                try {
+                  const theme = localStorage.getItem("portfolio-theme");
 
-              if (theme === "light") {
-                document.documentElement.classList.add("light");
-              }
-            } catch {}
-          })();
-        `,
-      }}
-    />
-  </head>
+                  if (theme === "light") {
+                    document.documentElement.classList.add("light");
+                  }
+                } catch {}
+              })();
+            `,
+          }}
+        />
+      </head>
 
-  <body className={`${geistSans.variable} ${geistMono.variable}`}>
-    <ThemeProvider>{children}</ThemeProvider>
-  </body>
-</html>
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <ThemeProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }
