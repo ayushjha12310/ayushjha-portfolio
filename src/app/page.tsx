@@ -1,5 +1,6 @@
-import ThemeToggle from "@/components/ui/ThemeToggle";
+import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
+import ThemeToggle from "@/components/ui/ThemeToggle";
 
 export default function Home() {
   return (
@@ -9,33 +10,44 @@ export default function Home() {
         <ThemeToggle />
 
         <div className="w-full rounded-2xl border border-border bg-card p-8">
+
           <p className="font-mono text-sm text-accent">
-            // BUTTON SYSTEM TEST
+            // DESIGN SYSTEM TEST
           </p>
 
           <h1 className="mt-3 text-3xl font-semibold">
-            Reusable Button System
+            Badge System
           </h1>
 
           <p className="mt-3 text-muted">
-            Testing primary, secondary and ghost button variants.
+            Testing reusable badges and technical metadata.
           </p>
+
+          <div className="mt-8 flex flex-wrap gap-2">
+            <Badge>Next.js</Badge>
+
+            <Badge>TypeScript</Badge>
+
+            <Badge variant="accent">
+              Featured
+            </Badge>
+
+            <Badge variant="outline">
+              Full-Stack
+            </Badge>
+
+            <Badge>MongoDB</Badge>
+
+            <Badge>Node.js</Badge>
+          </div>
 
           <div className="mt-8 flex flex-wrap gap-3">
             <Button>
-              Primary Button
+              Primary
             </Button>
 
             <Button variant="secondary">
-              Secondary Button
-            </Button>
-
-            <Button variant="ghost">
-              Ghost Button
-            </Button>
-
-            <Button href="/projects">
-              Projects
+              Secondary
             </Button>
           </div>
 
