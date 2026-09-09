@@ -28,7 +28,7 @@ export interface Education {
 
 export const PORTFOLIO_DATA = {
   personal: {
-    displayName: "Your Name",
+    displayName: "Ayush Kumar Jha",
     wordmark: "<yourusername.dev />",
     role: "Full-Stack Web Developer",
     eyebrow: "// FULL-STACK WEB DEVELOPER",
@@ -40,8 +40,8 @@ export const PORTFOLIO_DATA = {
     mindsetBio:
       "Having built around 8-10 projects and clones—including two live applications, DevGreet and Notiva—I focus on understanding how different software layers connect seamlessly. Technology is constantly evolving, and my principle is simple: keep learning, keep building, and adapt.",
     contacts: {
-      email: "your.email@example.com",
-      github: "https://github.com/yourusername",
+      email: "ayushjhaai123@gmail.com",
+      github: "https://github.com/ayushjha12310",
       linkedin: "https://linkedin.com/in/yourusername",
     },
   },
@@ -97,8 +97,8 @@ export const PORTFOLIO_DATA = {
         "Designed persistent data workflows using MongoDB.",
       ],
       techStack: ["Next.js", "TypeScript", "Node.js", "MongoDB", "Tailwind CSS"],
-      liveUrl: "https://your-live-project-url.com",
-      githubUrl: "https://github.com/yourusername/devgreet",
+      liveUrl: "https://dev-greet.vercel.app/",
+      githubUrl: "https://github.com/ayushjha12310/DevGreet",
       featured: true,
       imagePath: "/projects/devgreet.png",
     },
