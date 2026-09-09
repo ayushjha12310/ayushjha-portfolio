@@ -151,6 +151,14 @@ export const PORTFOLIO_DATA = {
       techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
       githubUrl: "https://github.com/yourusername",
     },
+    {
+      id: "repo-3",
+      title: "Dev Portfolio V1",
+      description:
+        "Clean responsive developer portfolio built with Next.js App Router.",
+      techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
+      githubUrl: "https://github.com/yourusername",
+    },
   ],
 
   education: [
