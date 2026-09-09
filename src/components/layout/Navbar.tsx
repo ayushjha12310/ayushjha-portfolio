@@ -28,36 +28,20 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-
-        {/* Logo */}
         <Link
           href="/"
           onClick={() => setIsOpen(false)}
-          className="
-            font-mono
-            text-sm
-            font-semibold
-            tracking-tight
-            text-foreground
-            transition-colors
-            hover:text-accent
-          "
+          className="font-mono text-sm font-semibold tracking-tight text-foreground transition-colors hover:text-accent"
         >
           {"<yourusername.dev />"}
         </Link>
 
-        {/* Desktop Navigation */}
         <nav className="hidden items-center gap-8 md:flex">
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="
-                text-sm
-                text-muted
-                transition-colors
-                hover:text-foreground
-              "
+              className="text-sm text-muted transition-colors hover:text-foreground"
             >
               {item.label}
             </Link>
@@ -70,7 +54,6 @@ export default function Navbar() {
           </Button>
         </nav>
 
-        {/* Mobile Actions */}
         <div className="flex items-center gap-2 md:hidden">
           <ThemeToggle />
 
@@ -79,31 +62,13 @@ export default function Navbar() {
             onClick={() => setIsOpen((open) => !open)}
             aria-label={isOpen ? "Close menu" : "Open menu"}
             aria-expanded={isOpen}
-            className="
-              flex h-10 w-10
-              items-center justify-center
-              rounded-xl
-              border border-border
-              bg-card
-              text-foreground
-              transition-all
-              hover:border-accent
-              active:scale-95
-              focus-visible:outline-none
-              focus-visible:ring-2
-              focus-visible:ring-accent
-            "
+            className="flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-card text-foreground transition-all hover:border-accent active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
           >
-            {isOpen ? (
-              <X size={18} />
-            ) : (
-              <Menu size={18} />
-            )}
+            {isOpen ? <X size={18} /> : <Menu size={18} />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
         <div className="border-t border-border md:hidden">
           <nav className="mx-auto flex max-w-6xl flex-col px-6 py-4">
@@ -112,15 +77,7 @@ export default function Navbar() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className="
-                  border-b border-border
-                  py-4
-                  text-sm
-                  text-muted
-                  transition-colors
-                  last:border-b-0
-                  hover:text-foreground
-                "
+                className="border-b border-border py-4 text-sm text-muted transition-colors last:border-b-0 hover:text-foreground"
               >
                 {item.label}
               </Link>
@@ -131,7 +88,6 @@ export default function Navbar() {
                 href="#contact"
                 variant="secondary"
                 className="w-full"
-                onClick={() => setIsOpen(false)}
               >
                 Contact
               </Button>

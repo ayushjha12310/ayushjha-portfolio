@@ -26,10 +26,28 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <ThemeProvider>{children}</ThemeProvider>
-      </body>
-    </html>
+   <html lang="en" suppressHydrationWarning>
+  <head>
+    <script
+      dangerouslySetInnerHTML={{
+        __html: `
+          (() => {
+            try {
+              const theme = localStorage.getItem("portfolio-theme");
+
+              if (theme === "light") {
+                document.documentElement.classList.add("light");
+              }
+            } catch {}
+          })();
+        `,
+      }}
+    />
+  </head>
+
+  <body className={`${geistSans.variable} ${geistMono.variable}`}>
+    <ThemeProvider>{children}</ThemeProvider>
+  </body>
+</html>
   );
 }

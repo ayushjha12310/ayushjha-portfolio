@@ -12,6 +12,7 @@ interface ButtonProps {
   target?: string;
   rel?: string;
   disabled?: boolean;
+  onClick?: () => void;
 }
 
 export default function Button({
