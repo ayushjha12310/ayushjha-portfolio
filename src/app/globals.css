@@ -120,3 +120,25 @@ html.light {
 ::-webkit-scrollbar-thumb:hover {
   opacity: 0.8;
 }
+
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.animate-typing {
+  animation:
+    typing 1.8s steps(30, end),
+    blink 0.7s step-end infinite;
+}

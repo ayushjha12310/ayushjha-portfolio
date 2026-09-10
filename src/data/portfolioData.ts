@@ -31,7 +31,7 @@ export const PORTFOLIO_DATA = {
     displayName: "Ayush Kumar Jha",
     wordmark: "<ayushjha.dev />",
     role: "Full-Stack Web Developer",
-    eyebrow: "// FULL-STACK WEB DEVELOPER",
+    eyebrow: "FULL-STACK WEB DEVELOPER",
     headline: "I build modern, practical web applications that solve real problems.",
     subheading:
       "Specializing in TypeScript, Next.js, Node.js, and MongoDB. Focused on clean architecture, performance, and user-centric systems.",

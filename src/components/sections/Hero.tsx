@@ -9,40 +9,40 @@ export default function Hero() {
   const { personal } = PORTFOLIO_DATA;
 
   return (
-    <section className="relative overflow-hidden pt-6 pb-12 md:py-20 lg:py-28">
-      {/* Background ambient lighting */}
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(34,197,94,0.15),rgba(255,255,255,0))]" />
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(var(--border)_1px,transparent_1px)] bg-size-[28px_28px] opacity-30 [mask-image:radial-gradient(ellipse_at_center,black_60%,transparent_100%)]" />
+    <section className="relative overflow-hidden pt-8 pb-16 md:py-24 lg:py-32">
+      {/* Premium Ambient Lighting & Grid Backdrop */}
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(34,197,94,0.15),transparent)]" />
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(var(--border)_1px,transparent_1px)] bg-size-[32px_32px] opacity-35 mask-[radial-gradient(ellipse_at_center,black_60%,transparent_100%)]" />
 
       <div className="mx-auto max-w-6xl px-6">
-        {/* Mobile-first stack layout -> Desktop 2-column grid */}
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-8">
-          
-          {/* Left Column: Personal info & Action buttons */}
+        {/* Main Grid Layout */}
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-10">
+
+          {/* Left Column: Personal Info & Action CTAs */}
           <div className="lg:col-span-7 flex flex-col justify-center">
-            {/* Live status badge */}
-            <div className="inline-flex w-fit items-center gap-2.5 rounded-full border border-accent/30 bg-accent/10 px-4 py-1.5 backdrop-blur-md shadow-xs">
+            {/* Live Status Badge */}
+            <div className="inline-flex w-fit items-center gap-2.5 rounded-full border border-accent/30 bg-accent/10 px-4 py-1.5 backdrop-blur-md shadow-2xs">
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
               </span>
-              <p className="font-mono text-xs font-semibold tracking-wider text-accent uppercase">
+              <p className="w-fit overflow-hidden whitespace-nowrap border-r-2 border-accent pr-1 font-mono text-xs font-semibold uppercase tracking-[0.18em] text-accent animate-typing">
                 {personal.eyebrow}
               </p>
             </div>
 
-            {/* Main Headline */}
-            <h1 className="mt-5 text-3xl font-bold leading-tight tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-6xl">
+            {/* Headline */}
+            <h1 className="mt-6 text-4xl font-extrabold leading-[1.08] tracking-tight bg-linear-to-r from-foreground via-foreground to-accent bg-clip-text text-transparent sm:text-5xl md:text-6xl lg:text-7xl">
               {personal.headline}
             </h1>
 
             {/* Subheading */}
-            <p className="mt-5 text-base font-normal leading-relaxed text-muted sm:text-lg md:text-xl">
+            <p className="mt-6 text-base font-normal leading-relaxed text-muted sm:text-lg md:text-xl max-w-2xl">
               {personal.subheading}
             </p>
 
-            {/* Action buttons */}
-            <div className="mt-8 flex flex-wrap items-center gap-3.5">
+            {/* Action Buttons */}
+            <div className="mt-10 flex flex-wrap items-center gap-4">
               <Button href="/projects">
                 View Projects
                 <ArrowUpRight size={16} className="ml-2" />
@@ -60,41 +60,40 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Column: Photo frame & Code Object Card */}
+          {/* Right Column: Photo Frame & Terminal Card */}
           <div className="lg:col-span-5 flex flex-col items-center gap-6">
-            
+
             {/* Profile Photo Frame */}
             <div className="relative group w-full max-w-70 sm:max-w-[320px]">
-              {/* Outer soft glow effect */}
-              <div className="absolute -inset-1 rounded-3xl bg-linear-to-r from-accent/40 to-emerald-500/20 opacity-50 blur-xl transition-all duration-500 group-hover:opacity-80" />
-              
+              {/* Outer soft ambient glow */}
+              <div className="absolute -inset-1 rounded-3xl bg-linear-to-r from-accent/40 via-emerald-500/20 to-accent/30 opacity-60 blur-xl transition-all duration-700 group-hover:opacity-100" />
+
               {/* Image Container */}
-              <div className="relative aspect-square w-full overflow-hidden rounded-2xl border border-border/80 bg-card shadow-2xl">
-                {/* Place your photo inside public/hero-photo.jpg */}
+              <div className="relative aspect-square w-full overflow-hidden rounded-2xl border border-border/80 bg-card shadow-2xl transition-transform duration-500 group-hover:scale-[1.01]">
                 <img
-                  src="/images/ayushjha.png" 
+                  src="/images/ayushjha.png"
                   alt="Ayush Jha"
-                  className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                 />
-                
-                {/* Floating recruiter badge */}
-                <div className="absolute bottom-3 right-3 flex items-center gap-1.5 rounded-lg border border-border/60 bg-background/80 px-2.5 py-1 text-[11px] font-mono font-medium text-foreground backdrop-blur-md">
-                  <Sparkles size={12} className="text-accent" />
+
+                {/* Floating Recruiter Badge */}
+                <div className="absolute bottom-3 right-3 flex items-center gap-2 rounded-xl border border-border/70 bg-background/80 px-3 py-1.5 text-xs font-mono font-medium text-foreground backdrop-blur-md shadow-lg">
+                  <Sparkles size={13} className="text-accent animate-pulse" />
                   <span>Available for Hire</span>
                 </div>
               </div>
             </div>
 
             {/* Terminal / Code Snippet Card */}
-            <div className="w-full rounded-2xl border border-border/80 bg-card/90 p-4 shadow-xl backdrop-blur-md sm:p-5 font-mono text-xs sm:text-sm">
-              {/* Terminal header bar */}
-              <div className="flex items-center justify-between border-b border-border/50 pb-2.5 mb-3">
+            <div className="w-full rounded-2xl border border-border/70 bg-card/80 p-4 sm:p-5 backdrop-blur-xl shadow-2xl transition-all duration-300 hover:border-accent/40 font-mono text-xs sm:text-sm">
+              {/* Terminal Header Bar */}
+              <div className="flex items-center justify-between border-b border-border/50 pb-3 mb-3">
                 <div className="flex items-center gap-1.5">
                   <span className="h-2.5 w-2.5 rounded-full bg-red-500/80" />
                   <span className="h-2.5 w-2.5 rounded-full bg-yellow-500/80" />
                   <span className="h-2.5 w-2.5 rounded-full bg-green-500/80" />
                 </div>
-                <div className="flex items-center gap-1.5 text-[11px] text-muted">
+                <div className="flex items-center gap-1.5 text-[11px] font-medium text-muted">
                   <Terminal size={12} className="text-accent" />
                   <span>developer.ts</span>
                 </div>
@@ -117,8 +116,8 @@ export default function Hero() {
 
         </div>
 
-        {/* Scroll indicator */}
         
+
 
       </div>
     </section>
