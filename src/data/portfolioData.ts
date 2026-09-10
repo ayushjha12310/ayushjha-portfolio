@@ -123,7 +123,7 @@ export const PORTFOLIO_DATA = {
         "Built reusable interfaces for notes, tasks, templates, search, and interactive project workflows.",
         "Implemented persistent user preferences, theme switching, archiving, and structured data management."
       ],
-      techStack: ["React", "Next.js", "TypeScript", "MongoDB", "Tailwind CSS"],
+      techStack: ["React", "Next.js", "TypeScript", "Node.js", "MongoDB", "Tailwind CSS"],
       liveUrl: "https://notiva-silk.vercel.app/",
       githubUrl: "https://github.com/ayushjha12310/Notiva",
       featured: true,
