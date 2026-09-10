@@ -38,7 +38,7 @@ export default function Navbar() {
           onClick={() => setIsOpen(false)}
           className="font-mono text-sm font-semibold tracking-tight text-foreground transition-colors hover:text-accent"
         >
-          {"<yourusername.dev />"}
+          {"<ayushjha.dev />"}
         </Link>
 
         {/* Desktop Navigation */}

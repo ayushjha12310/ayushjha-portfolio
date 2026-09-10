@@ -29,7 +29,7 @@ export interface Education {
 export const PORTFOLIO_DATA = {
   personal: {
     displayName: "Ayush Kumar Jha",
-    wordmark: "<yourusername.dev />",
+    wordmark: "<ayushjha.dev />",
     role: "Full-Stack Web Developer",
     eyebrow: "// FULL-STACK WEB DEVELOPER",
     headline: "I build modern, practical web applications that solve real problems.",
@@ -42,7 +42,7 @@ export const PORTFOLIO_DATA = {
     contacts: {
       email: "ayushjhaai123@gmail.com",
       github: "https://github.com/ayushjha12310",
-      linkedin: "https://linkedin.com/in/yourusername",
+      linkedin: "https://www.linkedin.com/in/ayush-jha-b16850435",
     },
   },
 
@@ -84,23 +84,25 @@ export const PORTFOLIO_DATA = {
       id: "devgreet",
       title: "DevGreet",
       category: "Full-Stack Web Application",
-      tagline: "Developer Content & Experience Sharing Platform",
+      tagline: "Secure Developers Community for sharing code snippets and AI prompts.",
       description:
         "DevGreet is a developer-centric application built to streamline developer workflows, content organization, and technical sharing.",
       problem:
-        "Developers often struggle with scattered content and clunky interfaces when organizing development resources and code sharing.",
+        "Developers often keep useful code snippets, AI prompts, and development resources scattered across different tools, making them harder to organize, reuse, and share.",
+
       solution:
-        "Engineered a streamlined, fast web platform with structured content flows, clean interactive UI, and high-performance routing.",
+        "Built a developer-focused social workspace where developers can create, organize, save, and publicly share code snippets and prompts through a structured, interactive platform.",
+
       engineeringHighlights: [
-        "Implemented secure state handling & API route architectures.",
-        "Integrated responsive modern interfaces with optimized client rendering.",
-        "Designed persistent data workflows using MongoDB.",
+        "Implemented JWT-based authentication with protected API routes and secure cookie handling.",
+        "Built MongoDB-backed workflows for snippets, prompts, collections, likes, comments, saves, and version history.",
+        "Added API rate limiting and Cloudinary integration for safer and more scalable application workflows."
       ],
       techStack: ["Next.js", "TypeScript", "Node.js", "MongoDB", "Tailwind CSS"],
       liveUrl: "https://dev-greet.vercel.app/",
       githubUrl: "https://github.com/ayushjha12310/DevGreet",
       featured: true,
-      imagePath: "/projects/devgreet.png",
+      imagePath: "/projects/DevGreet.png",
     },
     {
       id: "notiva",
@@ -108,19 +110,22 @@ export const PORTFOLIO_DATA = {
       category: "Personal Productivity & LifeOS",
       tagline: "Structured Personal Digital Workspace",
       description:
-        "Notiva is a personal information management application designed to organize ideas, notes, and task hierarchies inside a clean space.",
+        "A personal productivity workspace for organizing projects, notes, tasks, and structured information.",
+
       problem:
-        "Unstructured note-taking tools lead to fragmented thoughts and poor retrieval speeds.",
+        "Personal information often gets scattered across notes, tasks, and separate tools, making it difficult to organize and retrieve.",
+
       solution:
-        "Developed a structured project-based workspace that prioritizes user focus, quick navigation, and responsive data synchronization.",
+        "Built a structured LifeOS workspace with hierarchical projects, quick notes, templates, search, archiving, and customizable themes.",
+
       engineeringHighlights: [
-        "Structured nested data schemas for optimized document querying.",
-        "Built modular UI components for swift editing and interactive states.",
-        "Engineered fast client-side searching and category filtering.",
+        "Designed nested project and branch structures for organizing complex information.",
+        "Built reusable interfaces for notes, tasks, templates, search, and interactive project workflows.",
+        "Implemented persistent user preferences, theme switching, archiving, and structured data management."
       ],
       techStack: ["React", "Next.js", "TypeScript", "MongoDB", "Tailwind CSS"],
-      liveUrl: "https://your-live-project-url.com",
-      githubUrl: "https://github.com/yourusername/notiva",
+      liveUrl: "https://notiva-silk.vercel.app/",
+      githubUrl: "https://github.com/ayushjha12310/Notiva",
       featured: true,
       imagePath: "/projects/notiva.png",
     },
@@ -129,56 +134,64 @@ export const PORTFOLIO_DATA = {
   repositories: [
     {
       id: "repo-1",
-      title: "E-Commerce REST API",
+      title: "LinkTree Clone",
       description:
-        "Backend architecture with JWT auth, payment route mocks, and MongoDB pipelines.",
-      techStack: ["Node.js", "Express", "MongoDB", "Postman"],
-      githubUrl: "https://github.com/yourusername",
+        "A modern, responsive Linktree frontend landing page built with Next.js and Tailwind CSS.",
+      techStack: ["Next.js", "Tailwind CSS"],
+      githubUrl: "https://github.com/ayushjha12310/Linktree-Clone",
     },
     {
       id: "repo-2",
-      title: "Real-time Chat App Clone",
+      title: "A sleek, responsive Todo app",
       description:
-        "WebSocket implementation for instant message transport and user status updates.",
-      techStack: ["React", "Node.js", "Socket.io"],
-      githubUrl: "https://github.com/yourusername",
+        "A sleek, responsive Todo app built with React, Tailwind CSS, and LocalStorage",
+      techStack: ["React", "Node.js", "javascript", "tailwind CSS"],
+      githubUrl: "https://github.com/ayushjha12310/to-do-web",
     },
     {
       id: "repo-3",
-      title: "Dev Portfolio V1",
+      title: "URL-Shortner",
       description:
-        "Clean responsive developer portfolio built with Next.js App Router.",
-      techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
-      githubUrl: "https://github.com/yourusername",
+        "A fast URL shortener web app built with Next.js, Tailwind CSS, and MongoDB to generate short links easily.",
+      techStack: ["Next.js", "Javascript", "Node.js", "Tailwind CSS", "MongoDB"],
+      githubUrl: "https://github.com/ayushjha12310/URL-Shortner ",
     },
     {
-      id: "repo-3",
-      title: "Dev Portfolio V1",
+      id: "repo-4",
+      title: "Password-Manager",
       description:
-        "Clean responsive developer portfolio built with Next.js App Router.",
-      techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
-      githubUrl: "https://github.com/yourusername",
+        "A simple password manager built with React and Vite, using Browser LocalStorage to save credentials locally.",
+      techStack: ["Vite", "javascript", "Tailwind CSS", "React"],
+      githubUrl: "https://github.com/ayushjha12310/Password-Manager",
+    },
+    {
+      id: "repo-5",
+      title: "Netflix Clone",
+      description:
+        "My first Clone code using only HTML and CSS.",
+      techStack: ["HTML", "CSS"],
+      githubUrl: "https://github.com/ayushjha12310/Netflix-Clone",
     },
   ],
 
   education: [
     {
       degree: "Bachelor of Computer Applications (BCA)",
-      institution: "Your University",
+      institution: "Noida International University",
       period: "2023 - 2026",
       description:
         "Focus on Computer Science fundamentals, Web Technologies, Database Management, and Software Engineering.",
     },
     {
       degree: "Class 12 (Senior Secondary)",
-      institution: "Your School / Board",
+      institution: "M.B.S International School/CBSE",
       period: "2022",
       description:
         "Completed secondary education with core focus on academics.",
     },
     {
       degree: "Class 10 (Secondary School)",
-      institution: "Your School / Board",
+      institution: "Shivraj Sharma Junior High School / CBSE",
       period: "2020",
       description:
         "Completed fundamental school education.",
