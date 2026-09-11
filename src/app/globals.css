@@ -142,3 +142,20 @@ html.light {
     typing 1.8s steps(30, end),
     blink 0.7s step-end infinite;
 }
+
+/* Custom slide-up animation for premium feel */
+@keyframes slideUpFade {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  opacity: 0; /* Keeps it hidden before animation starts */
+  animation: slideUpFade 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

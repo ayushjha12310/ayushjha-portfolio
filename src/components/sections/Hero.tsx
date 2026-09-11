@@ -9,35 +9,35 @@ export default function Hero() {
   const { personal } = PORTFOLIO_DATA;
 
   return (
-    <section className="relative overflow-hidden pt-8 pb-16 md:py-24 lg:py-32">
+    <section className="relative overflow-hidden pt-12 pb-16 md:py-24 lg:py-32">
       {/* Premium Ambient Lighting & Grid Backdrop */}
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(34,197,94,0.15),transparent)]" />
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(var(--border)_1px,transparent_1px)] bg-size-[32px_32px] opacity-35 mask-[radial-gradient(ellipse_at_center,black_60%,transparent_100%)]" />
 
       <div className="mx-auto max-w-6xl px-6">
-        {/* Main Grid Layout */}
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-10">
+        {/* Main Grid Layout: Text on top/left, Photo on bottom/right */}
+        <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-12 lg:gap-10">
 
-          {/* Left Column: Personal Info & Action CTAs */}
-          <div className="lg:col-span-7 flex flex-col justify-center">
-            {/* Live Status Badge */}
-            <div className="inline-flex w-fit items-center gap-2.5 rounded-full border border-accent/30 bg-accent/10 px-4 py-1.5 backdrop-blur-md shadow-2xs">
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
-              </span>
-              <p className="w-fit overflow-hidden whitespace-nowrap border-r-2 border-accent pr-1 font-mono text-xs font-semibold uppercase tracking-[0.18em] text-accent animate-typing">
-                {personal.eyebrow}
-              </p>
-            </div>
+          {/* Left Column: Personal Info & Action CTAs - First to animate */}
+          <div className="lg:col-span-7 flex flex-col justify-center animate-slide-up">
+            
+            {/* Greeting */}
+            <p className="mb-4 font-mono text-sm sm:text-base font-medium tracking-wide text-accent">
+              Hello, my name is
+            </p>
 
-            {/* Headline */}
-            <h1 className="mt-6 text-4xl font-extrabold leading-[1.08] tracking-tight bg-linear-to-r from-foreground via-foreground to-accent bg-clip-text text-transparent sm:text-5xl md:text-6xl lg:text-7xl">
-              {personal.headline}
+            {/* Name */}
+            <h1 className="text-5xl font-extrabold leading-[1.1] tracking-tight text-foreground sm:text-6xl md:text-7xl">
+              Ayush Jha.
             </h1>
 
-            {/* Subheading */}
-            <p className="mt-6 text-base font-normal leading-relaxed text-muted sm:text-lg md:text-xl max-w-2xl">
+            {/* Role */}
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-muted sm:text-4xl md:text-5xl">
+              I'm a Full Stack Web Developer.
+            </h2>
+
+            {/* Subheading / Brief Description */}
+            <p className="mt-6 text-base font-normal leading-relaxed text-muted/80 sm:text-lg md:text-xl max-w-2xl">
               {personal.subheading}
             </p>
 
@@ -60,8 +60,8 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Column: Photo Frame & Terminal Card */}
-          <div className="lg:col-span-5 flex flex-col items-center gap-6">
+          {/* Right Column: Photo Frame & Terminal Card - Animates second (200ms delay) */}
+          <div className="lg:col-span-5 flex flex-col items-center gap-6 animate-slide-up delay-200">
 
             {/* Profile Photo Frame */}
             <div className="relative group w-full max-w-70 sm:max-w-[320px]">
@@ -116,8 +116,24 @@ export default function Hero() {
 
         </div>
 
-        
+        {/* Bottom Section: "I build..." Headline & Badge - Animates third (500ms delay) */}
+        <div className="mt-24 flex flex-col items-center justify-center text-center animate-slide-up delay-500">
+          {/* Live Status Badge */}
+          <div className="inline-flex w-fit items-center gap-2.5 rounded-full border border-accent/30 bg-accent/10 px-4 py-1.5 backdrop-blur-md shadow-2xs">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
+            </span>
+            <p className="w-fit overflow-hidden whitespace-nowrap border-r-2 border-accent pr-1 font-mono text-xs font-semibold uppercase tracking-[0.18em] text-accent animate-typing">
+              {personal.eyebrow}
+            </p>
+          </div>
 
+          {/* Large dynamic headline ("I build...") */}
+          <h3 className="mt-6 max-w-4xl text-3xl font-extrabold leading-tight tracking-tight bg-linear-to-r from-foreground via-foreground to-accent bg-clip-text text-transparent sm:text-4xl md:text-5xl">
+            {personal.headline}
+          </h3>
+        </div>
 
       </div>
     </section>
